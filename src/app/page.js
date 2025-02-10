@@ -2,6 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import Contact from "./contact/page";
+import Link from "next/link";
 
 const images = [
   {
@@ -95,7 +96,7 @@ const Page = () => {
         </div>
       </div>
 
-      <div className="max-w-7xl py-10 flex flex-col md:flex-row items-center w-full mx-auto px-4 sm:px-6 lg:px-8 mt-4">
+      <div className="max-w-7xl flex flex-col md:flex-row items-center w-full mx-auto px-4 sm:px-2 lg:px-8 mt-4">
         <div className="w-full md:w-1/2 text-center md:text-left px-4">
           <h2 className="text-lg font-semibold mt-6 sm:mt-8">Our Events</h2>
           <p className="text-xl sm:text-2xl md:text-3xl font-bold mt-2">
@@ -122,7 +123,7 @@ const Page = () => {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 py-10">
+      <div className="max-w-7xl mx-auto px-4 py-5">
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-12 gap-3 md:gap-4">
           {images.map(({ src, alt, colSpan, aspect }, index) => (
             <div key={index} className={`${colSpan}`}>
@@ -140,12 +141,12 @@ const Page = () => {
         </div>
 
         <div className="text-center mt-8 sm:mt-12">
-          <a
-            href="#portfolio"
+          <Link
+            href="/portfolio"
             className="bg-blue-500 text-white font-bold py-2 sm:py-3 px-4 sm:px-6 rounded-lg hover:bg-blue-600 transition-colors duration-200 inline-block"
           >
             Show Our Portfolio
-          </a>
+          </Link>
         </div>
       </div>
       <Contact />
